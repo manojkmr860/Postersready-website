@@ -42,7 +42,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <button
                 onClick={onSecureAccess}
-                className="bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-900 transition-all duration-200 text-lg"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 transition-all duration-200 text-lg"
               >
                 Secure Business Access
               </button>
@@ -54,7 +54,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               <div
                 className="absolute top-1/2 left-1/2 w-44 lg:w-52 transition-all duration-500 hover:scale-105 z-10"
-                style={{ transform: 'translate(-90%, -60%) rotate(-12deg)' }}
+                style={{ transform: 'translate(-85%, -50%) rotate(-6deg)' }}
               >
                 <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
                   <div className="aspect-[3/4] bg-gradient-to-br from-amber-50 via-orange-100 to-amber-200 p-6 flex flex-col justify-between relative">
@@ -71,7 +71,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
                     <div>
                       <div className="text-2xl font-black text-gray-900 mb-1">Product Launch</div>
-                      <div className="text-sm text-gray-700 font-semibold">Satisfy your palate with 3 builds<br/>with unmatched precision.</div>
+                      <div className="text-sm text-gray-700 font-semibold">Satisfy your palate with 3 builds<br />with unmatched precision.</div>
                       <button className="bg-black text-white px-4 py-2 rounded-lg text-xs font-bold mt-3 inline-block">
                         ORDER NOW
                       </button>
@@ -82,7 +82,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               <div
                 className="absolute top-1/2 left-1/2 w-44 lg:w-52 transition-all duration-500 hover:scale-105 z-20"
-                style={{ transform: 'translate(-50%, -50%) rotate(-3deg)' }}
+                style={{ transform: 'translate(-50%, -50%) rotate(0deg)' }}
               >
                 <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
                   <div className="aspect-[3/4] bg-gradient-to-br from-orange-400 via-yellow-400 to-orange-500 p-6 flex flex-col justify-between relative">
@@ -95,7 +95,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
                       <div className="text-sm font-bold text-orange-950 mb-2">பொங்கல்</div>
 
                       <div className="text-center mt-8">
-                        <div className="text-3xl font-black text-orange-950 mb-2 leading-tight">பொங்கல்<br/>நல்வாழ்த்துக்கள்</div>
+                        <div className="text-3xl font-black text-orange-950 mb-2 leading-tight">பொங்கல்<br />நல்வாழ்த்துக்கள்</div>
                         <div className="text-lg font-bold text-orange-900 mt-4">Happy Pongal</div>
                         <div className="text-sm text-orange-900 font-semibold mt-1">TamilAutoBrand</div>
                       </div>
@@ -106,7 +106,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               <div
                 className="absolute top-1/2 left-1/2 w-44 lg:w-52 transition-all duration-500 hover:scale-105 z-30"
-                style={{ transform: 'translate(-10%, -40%) rotate(5deg)' }}
+                style={{ transform: 'translate(-15%, -50%) rotate(6deg)' }}
               >
                 <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
                   <div className="aspect-[3/4] bg-gradient-to-br from-gray-100 via-white to-gray-50 p-6 flex flex-col justify-between relative">
