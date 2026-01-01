@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-lime-300 via-emerald-400 to-emerald-800;
+    min-height: 100vh;
+  }
+}
