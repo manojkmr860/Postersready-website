@@ -10,6 +10,14 @@ export default function FinalCTA({ onSecureAccess }: FinalCTAProps) {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="flex justify-center mb-8">
+          <img
+            src="/assets/posters-ready-logo.jpg"
+            alt="Posters Ready Logo"
+            className="h-20 w-20 rounded-2xl object-cover shadow-2xl shadow-lime-500/20"
+          />
+        </div>
+
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
           Your customers are waiting.{' '}
           <span className="text-lime-300">What are you waiting for?</span>

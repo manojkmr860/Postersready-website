@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import WorkflowSection from './components/WorkflowSection';
+import TestimonialsSection from './components/TestimonialsSection';
 import InstagramSection from './components/InstagramSection';
 import ComparisonSection from './components/ComparisonSection';
 import PricingSection from './components/PricingSection';
@@ -21,6 +22,7 @@ function App() {
       <Header onSecureAccess={handleSecureAccess} />
       <HeroSection onSecureAccess={handleSecureAccess} />
       <WorkflowSection />
+      <TestimonialsSection />
       <InstagramSection />
       <ComparisonSection />
       <PricingSection onSecureAccess={handleSecureAccess} />

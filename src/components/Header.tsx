@@ -18,14 +18,21 @@ export default function Header({ onSecureAccess }: HeaderProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-white/80 backdrop-blur-xl shadow-lg'
-          : 'bg-white/60 backdrop-blur-lg'
+        ? 'bg-white/80 backdrop-blur-xl shadow-lg'
+        : 'bg-white/60 backdrop-blur-lg'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <div className="text-2xl sm:text-3xl font-bold text-emerald-950">
-            Posters Ready
+          <div className="flex items-center gap-3">
+            <img
+              src="/assets/posters-ready-logo.jpg"
+              alt="Posters Ready Logo"
+              className="h-10 sm:h-12 w-10 sm:w-12 rounded-xl object-cover"
+            />
+            <span className="text-2xl sm:text-3xl font-bold text-emerald-950">
+              Posters Ready
+            </span>
           </div>
           <div className="flex items-center gap-3 sm:gap-6">
             <button className="text-emerald-900 hover:text-emerald-700 transition-colors font-medium text-sm sm:text-base">
