@@ -1,4 +1,4 @@
-import { Check, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 interface PricingSectionProps {
   onSecureAccess: () => void;
@@ -6,8 +6,17 @@ interface PricingSectionProps {
 
 export default function PricingSection({ onSecureAccess }: PricingSectionProps) {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-30 px-4 sm:px-6 lg:px-8 relative">
+      {/* Smooth Blend to Next Section (Bottom) */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(249,250,251,0.5) 0%, rgba(249,250,251,0.5) calc(100% - 96px), rgba(249,250,251,0) 100%)',
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
             SMB Growth Plans

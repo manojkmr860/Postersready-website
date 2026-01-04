@@ -28,8 +28,8 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
             Common Questions from Business Owners
@@ -69,6 +69,9 @@ export default function FAQSection() {
           ))}
         </div>
       </div>
+
+      {/* Smooth Blend to Next Section (Bottom) */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-emerald-900 to-transparent pointer-events-none z-0"></div>
     </section>
   );
 }

@@ -14,7 +14,10 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[85vh]">
           <div className="space-y-8 max-w-xl">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
-              Your Brand. Your Concept. Posters Ready in Minutes.
+              Your Brand. Your Concept.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-emerald-600">
+               Posters Ready
+              </span> in Minutes.
             </h1>
 
             <p className="text-lg sm:text-xl text-white/90 leading-relaxed font-medium">
@@ -39,7 +42,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2 p-1.5">
               <button
                 onClick={onSecureAccess}
                 className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 transition-all duration-200 text-lg"
@@ -55,8 +58,8 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               {/* Coffee Brand - MAIN CARD (TOP LAYER) - FAR LEFT - FIRST */}
               <div
-                className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-50"
-                style={{ left: '10%', top: '10%', transform: 'rotate(-5deg)', animation: 'float-gentle 5s ease-in-out infinite 1s' }}
+                className="absolute w-70 lg:w-80 transition-all duration-500 hover:scale-105 z-40 hover:z-55 hover:z-59"
+                style={{ left: '5%', top: '10%', transform: 'rotate(-5deg)', animation: 'float-gentle 5s ease-in-out infinite 1s' }}
               >
                 <div className="rounded-xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.4),0_0_30px_rgba(132,204,22,0.6),0_0_60px_rgba(132,204,22,0.3)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.5),0_0_40px_rgba(132,204,22,0.8)] transition-shadow duration-300 border-4 border-lime-400">
                   <img
@@ -69,8 +72,8 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               {/* Pongal Poster - SECONDARY (MIDDLE LAYER) - PEEKING RIGHT - SECOND */}
               <div
-                className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-30"
-                style={{ left: '26%', top: '12%', transform: 'rotate(-3deg)', animation: 'float-slow 7s ease-in-out infinite 0.5s' }}
+                className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-30 hover:z-50"
+                style={{ left: '30%', top: '12%', animation: 'float-slow 7s ease-in-out infinite 0.5s hover:z-50' }}
               >
                 <div className="rounded-xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.35),0_0_25px_rgba(132,204,22,0.5),0_0_50px_rgba(132,204,22,0.3)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.45),0_0_35px_rgba(132,204,22,0.7)] transition-shadow duration-300 border-4 border-lime-400">
                   <img
@@ -83,8 +86,8 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               {/* Event Planner - BACK CARD (BOTTOM LAYER) - FURTHEST RIGHT - THIRD */}
               <div
-                className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-10"
-                style={{ left: '42%', top: '14%', transform: 'rotate(-1deg)', animation: 'float 6s ease-in-out infinite' }}
+                className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-10 hover:z-50"
+                style={{ left: '55%', top: '14%', transform: 'rotate(1deg)', animation: 'float 6s ease-in-out infinite hover:z-50' }}
               >
                 <div className="rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_20px_rgba(132,204,22,0.5),0_0_40px_rgba(132,204,22,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.4),0_0_30px_rgba(132,204,22,0.7)] transition-shadow duration-300 border-4 border-lime-400">
                   <img

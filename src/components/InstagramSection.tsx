@@ -2,12 +2,21 @@ import { TrendingUp, Camera, Zap, ChevronLeft, Instagram } from 'lucide-react';
 
 export default function InstagramSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-40 px-5 sm:px-7 lg:px-9 relative">
+      {/* Smooth Blend to Next Section (Bottom) */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) calc(100% - 128px), rgba(255,255,255,0) 100%)',
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Column: Features */}
-          <div className="space-y-12">
+          <div className="space-y-14">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-emerald-950 leading-[1.1] tracking-tight">
               Built for the Feed.<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-emerald-600">
@@ -43,6 +52,19 @@ export default function InstagramSection() {
               </div>
 
               {/* Feature 3 */}
+              <div className="flex gap-6 items-start group">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="text-white fill-white/20" size={32} strokeWidth={2} />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-gray-900">Accelerated Engagement</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed max-w-sm">
+                    Professional-quality content that stops the scroll and drives action
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 4 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="text-white fill-white/20" size={32} strokeWidth={2} />
