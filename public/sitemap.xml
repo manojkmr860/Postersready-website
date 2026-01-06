@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://postersready.com/</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://postersready.com/assets/posters-ready-logo.png</image:loc>
+      <image:title>Posters Ready - AI Instagram Post Designer</image:title>
+      <image:caption>Create stunning Instagram posts in 180 seconds with AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://postersready.com/assets/coffee-brand.png</image:loc>
+      <image:title>AI-generated Coffee Brand Instagram Post</image:title>
+      <image:caption>Professional Instagram design created with Posters Ready AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://postersready.com/assets/pongal-festival.jpg</image:loc>
+      <image:title>Festival Social Media Post Design</image:title>
+      <image:caption>Created festival celebration Instagram post with Posters Ready AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://postersready.com/assets/event-planner.jpg</image:loc>
+      <image:title>Event Planner Instagram Design</image:title>
+      <image:caption>Professional event marketing post created with Posters Ready AI</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>
+

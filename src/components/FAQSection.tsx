@@ -28,12 +28,15 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Frequently Asked Questions" id="faq">
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
-            Common Questions from Business Owners
+            Frequently Asked Questions About AI Instagram Design
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Everything small business owners and social media managers need to know about Posters Ready
+          </p>
         </div>
 
         <div className="space-y-4">

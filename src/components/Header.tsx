@@ -27,7 +27,7 @@ export default function Header({ onSecureAccess }: HeaderProps) {
           <div className="flex items-center gap-4">
             <img
               src="/assets/posters-ready-logo.png"
-              alt="Posters Ready Logo"
+              alt="Posters Ready - AI-Powered Instagram Post Designer"
               className="h-12 sm:h-12 w-10 sm:w-12 rounded-xl object-cover"
             />
             <span className="text-2xl sm:text-3xl font-bold text-emerald-950">

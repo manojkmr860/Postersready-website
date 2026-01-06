@@ -3,12 +3,15 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export default function WorkflowSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white" aria-label="How Posters Ready Works" id="how-it-works">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            The 5-Step Process
+            Create Professional Instagram Posts in 5 Simple Steps
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our AI-powered workflow transforms your website into stunning social media content automatically
+          </p>
         </div>
 
         <div className="relative">
@@ -25,8 +28,9 @@ export default function WorkflowSection() {
               <div className="relative z-10 w-full h-full bg-white rounded-[22px] overflow-hidden">
                 <img
                   src="/assets/workflow-step1-connect.png"
-                  alt="Connect - Scan your website"
+                  alt="Step 1: Connect your website URL for AI brand analysis and color extraction"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -38,8 +42,9 @@ export default function WorkflowSection() {
               <div className="relative z-10 w-full h-full bg-white rounded-[22px] overflow-hidden">
                 <img
                   src="/assets/workflow-step2-extract.png"
-                  alt="Extract - Find colors & logos"
+                  alt="Step 2: AI automatically extracts brand colors, logos, and visual identity"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -51,8 +56,9 @@ export default function WorkflowSection() {
               <div className="relative z-10 w-full h-full bg-white rounded-[22px] overflow-hidden">
                 <img
                   src="/assets/workflow-step3-define.jpg"
-                  alt="Define - Customize your content"
+                  alt="Step 3: Define and customize your Instagram post content and messaging"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -64,8 +70,9 @@ export default function WorkflowSection() {
               <div className="relative z-10 w-full h-full bg-white rounded-[22px] overflow-hidden">
                 <img
                   src="/assets/workflow-step4-concept.jpg"
-                  alt="Concept - Choose a layout"
+                  alt="Step 4: Choose from AI-generated professional design layouts and templates"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -77,8 +84,9 @@ export default function WorkflowSection() {
               <div className="relative z-10 w-full h-full bg-white rounded-[22px] overflow-hidden">
                 <img
                   src="/assets/workflow-step5-publish.jpg"
-                  alt="Publish - Share your design"
+                  alt="Step 5: Publish and share your professional Instagram post directly to social media"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

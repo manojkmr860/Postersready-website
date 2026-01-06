@@ -36,8 +36,9 @@ export default function FinalCTA({ onSecureAccess }: FinalCTAProps) {
         <div className="flex justify-center mb-8 ">
           <img
             src="/assets/posters-ready-logo.png"
-            alt="Posters Ready Logo"
+            alt="Posters Ready - AI Instagram Post Designer for Small Businesses"
             className="h-20 w-20 rounded-3xl shadow-xl shadow-lime-500/50"
+            loading="lazy"
           />
         </div>
 

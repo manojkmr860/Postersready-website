@@ -9,7 +9,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
   const [url, setUrl] = useState('');
 
   return (
-    <section className="relative pt-24 pb-16 px-4 sm:px-2 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-400 via-green-400 to-emerald-400">
+    <section className="relative pt-24 pb-16 px-4 sm:px-2 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-400 via-green-400 to-emerald-400" aria-label="Hero section - AI Instagram Post Designer">
       <div className="max-w-7xl mx-auto h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[85vh]">
           <div className="space-y-8 max-w-xl">
@@ -21,7 +21,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
             </h1>
 
             <p className="text-lg sm:text-xl text-white/90 leading-relaxed font-medium">
-              Turn your website URL into stunning, Instagram-ready posters in 180 seconds. Not hours.
+              Create stunning, brand-consistent <strong>Instagram posts</strong> in 180 seconds with our <strong>AI design agent</strong>. Perfect for <em>small businesses</em> and <em>social media agencies</em>.
             </p>
 
             <div className="hero-search-attn bg-white/20 backdrop-blur-md rounded-2xl p-1.5">
@@ -65,8 +65,9 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
                 <div className="rounded-xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.4),0_0_30px_rgba(132,204,22,0.6),0_0_60px_rgba(132,204,22,0.3)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.5),0_0_40px_rgba(132,204,22,0.8)] transition-shadow duration-300 border-4 border-lime-400">
                   <img
                     src="/assets/coffee-brand.png"
-                    alt="Coffee Brand Poster"
+                    alt="AI-generated Instagram post design for coffee brand showing professional branding"
                     className="w-full h-full object-cover aspect-[3/4]"
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -79,8 +80,9 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
                 <div className="rounded-xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.35),0_0_25px_rgba(132,204,22,0.5),0_0_50px_rgba(132,204,22,0.3)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.45),0_0_35px_rgba(132,204,22,0.7)] transition-shadow duration-300 border-4 border-lime-400">
                   <img
                     src="/assets/pongal-festival.jpg"
-                    alt="Pongal Festival Poster"
+                    alt="AI-created festival social media post for Pongal celebration with traditional branding"
                     className="w-full h-full object-cover aspect-[3/4]"
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -93,8 +95,9 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
                 <div className="rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_20px_rgba(132,204,22,0.5),0_0_40px_rgba(132,204,22,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.4),0_0_30px_rgba(132,204,22,0.7)] transition-shadow duration-300 border-4 border-lime-400">
                   <img
                     src="/assets/event-planner.jpg"
-                    alt="Event Planner Poster"
+                    alt="Professional event planner Instagram post created with AI design automation"
                     className="w-full h-full object-cover aspect-[3/4]"
+                    loading="eager"
                   />
                 </div>
               </div>

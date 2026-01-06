@@ -7,10 +7,10 @@ export default function ComparisonSection() {
         <div className="bg-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/40 mb-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
-              Value Comparison: The Smart Choice
+              AI Design vs. Traditional Methods: Save Hours Every Week
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              See how AI agents transform your design workflow
+              Compare manual Instagram design workflows with Posters Ready's AI-powered automation
             </p>
           </div>
 
@@ -19,8 +19,9 @@ export default function ComparisonSection() {
             <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <img
                 src="/assets/comparison-old-way.jpg"
-                alt="The Old Way - Manual Design Process"
+                alt="Traditional manual Instagram design process: time-consuming, expensive, inconsistent branding"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -28,8 +29,9 @@ export default function ComparisonSection() {
             <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-2xl hover:shadow-orange-500/50  hover:scale-[1.05] transition-all duration-300">
               <img
                 src="/assets/comparison-new-way.jpg"
-                alt="Posters Ready - AI Powered Design Process"
+                alt="Posters Ready AI-powered design: fast, affordable, brand-consistent Instagram posts in 180 seconds"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>

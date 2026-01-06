@@ -35,8 +35,11 @@ export default function TestimonialsSection() {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-                        Testimonials and Trust
+                        Trusted by Business Owners & Social Media Managers
                     </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        See how small businesses and marketing professionals create stunning Instagram content with Posters Ready
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">

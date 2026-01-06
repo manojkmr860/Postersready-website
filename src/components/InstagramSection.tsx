@@ -3,7 +3,7 @@ import { CometCard } from '@/components/ui/comet-card';
 
 export default function InstagramSection() {
   return (
-    <section className="py-40 px-5 sm:px-7 lg:px-9 relative">
+    <section className="py-40 px-5 sm:px-7 lg:px-9 relative" aria-label="Instagram optimization features" id="features">
       {/* Smooth Blend to Next Section (Bottom) */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
