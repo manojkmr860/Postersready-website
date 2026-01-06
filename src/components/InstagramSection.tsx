@@ -1,4 +1,5 @@
 import { TrendingUp, Camera, Zap, ChevronLeft, Instagram } from 'lucide-react';
+import { CometCard } from '@/components/ui/comet-card';
 
 export default function InstagramSection() {
   return (
@@ -12,11 +13,11 @@ export default function InstagramSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto relative justify-center items-center z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center self-center justify-center">
 
           {/* Left Column: Features */}
-          <div className="space-y-14">
+          <div className="space-y-14 justify-center items-center">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-emerald-950 leading-[1.1] tracking-tight">
               Built for the Feed.<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-emerald-600">
@@ -80,12 +81,12 @@ export default function InstagramSection() {
           </div>
 
           {/* Right Column: Phone Mockup */}
-          <div className="relative flex justify-center items-center">
+          <CometCard className="relative flex justify-center items-center">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-lime-400/20 rounded-full blur-3xl pointer-events-none"></div>
 
             {/* iPhone Frame */}
-            <div className="relative w-[340px] h-[680px] bg-gray-900 rounded-[50px] shadow-[0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] border-[8px] border-gray-900 overflow-hidden ring-4 ring-gray-100 z-10 transform hover:scale-[1.02] transition-transform duration-500">
+            <div className=" hero-pulse-btn relative w-[340px] h-[680px] bg-gray-900 rounded-[50px] shadow-[0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] border-[8px] border-gray-900 overflow-hidden ring-4 ring-gray-100 z-10 transform hover:scale-[1.02] transition-transform duration-500">
               {/* Notch & Status Bar Area */}
               <div className="absolute top-0 w-full h-14 bg-white z-20 flex justify-between items-end px-6 pb-2">
                 <span className="text-xs font-bold text-gray-900">9:41</span>
@@ -142,7 +143,7 @@ export default function InstagramSection() {
               {/* Home Indicator */}
               <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-gray-900 rounded-full z-30"></div>
             </div>
-          </div>
+          </CometCard>
 
         </div>
       </div>

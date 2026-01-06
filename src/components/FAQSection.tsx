@@ -70,8 +70,7 @@ export default function FAQSection() {
         </div>
       </div>
 
-      {/* Smooth Blend to Next Section (Bottom) */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-emerald-900 to-transparent pointer-events-none z-0"></div>
+      
     </section>
   );
 }

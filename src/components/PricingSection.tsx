@@ -6,7 +6,7 @@ interface PricingSectionProps {
 
 export default function PricingSection({ onSecureAccess }: PricingSectionProps) {
   return (
-    <section className="py-30 px-4 sm:px-6 lg:px-8 relative">
+    <section className="py-30 px-4 sm:px-6 lg:px-12 relative">
       {/* Smooth Blend to Next Section (Bottom) */}
       <div
         className="absolute inset-0 z-0 pointer-events-none"
@@ -68,7 +68,7 @@ export default function PricingSection({ onSecureAccess }: PricingSectionProps) 
           </div>
 
           {/* Visionary Business */}
-          <div className="bg-[#F6F6F2] rounded-[32px] p-1 shadow-[0_0_40px_rgba(132,204,22,0.3)] relative transform hover:-translate-y-2 transition-all duration-300">
+          <div className="bg-[#F6F6F2] rounded-[32px] p-1 shadow-[0_0_40px_rgba(132,204,22,0.3)] relative transform hover:scale-105 transition-all duration-300">
             <div className="absolute inset-0 rounded-[32px] ring-4 ring-[#A3E635] shadow-[0_0_20px_rgba(163,230,53,0.5)] z-0 pointer-events-none"></div>
             <div className="bg-[#F6F6F2] rounded-[28px] p-7 h-full relative z-10 flex flex-col">
               <div className="absolute -top-5 right-6 bg-[#042F1A] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg">
@@ -106,7 +106,7 @@ export default function PricingSection({ onSecureAccess }: PricingSectionProps) 
               <div className="pt-8">
                 <button
                   onClick={onSecureAccess}
-                  className="w-full bg-gradient-to-r from-[#84CC16] to-[#65A30D] text-[#042F1A] py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
+                  className="w-full bg-gradient-to-r from-[#84CC16] to-[#65A30D] text-[#042F1A] py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-2xl hover:scale-[1.04] transition-all duration-200"
                 >
                   Lock in Business Rate
                 </button>
@@ -115,7 +115,7 @@ export default function PricingSection({ onSecureAccess }: PricingSectionProps) 
           </div>
 
           {/* Enterprise */}
-          <div className="bg-[#0B1525] rounded-[32px] p-1 shadow-2xl relative transform hover:-translate-y-2 transition-all duration-300">
+          <div className="bg-[#0B1525] rounded-[32px] p-1 shadow-2xl relative transform hover:-translate-y-2 hover:scale-105 transition-all duration-300">
             <div className="absolute inset-0 rounded-[32px] ring-2 ring-[#B48128] z-0 pointer-events-none"></div>
             <div className="bg-[#0B1525] rounded-[28px] p-7 h-full relative z-10 flex flex-col">
               <div className="absolute -top-5 right-6 bg-[#D4AF37] text-[#0B1525] px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-lg">

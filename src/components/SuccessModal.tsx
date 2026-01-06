@@ -1,5 +1,51 @@
 import { Copy, X, Share2 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+type ConfettiFn = (options: Record<string, unknown>) => void;
+
+let confettiLoader: Promise<ConfettiFn | null> | null = null;
+
+async function loadConfettiFromCdn(): Promise<ConfettiFn | null> {
+  if (typeof window === 'undefined') return null;
+
+  const w = window as unknown as { confetti?: unknown };
+  if (typeof w.confetti === 'function') {
+    return w.confetti as ConfettiFn;
+  }
+
+  if (confettiLoader) return confettiLoader;
+
+  confettiLoader = new Promise<ConfettiFn | null>((resolve) => {
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[data-tsparticles-confetti="true"]'
+    );
+
+    if (existingScript) {
+      existingScript.addEventListener('load', () => {
+        const w2 = window as unknown as { confetti?: unknown };
+        resolve(typeof w2.confetti === 'function' ? (w2.confetti as ConfettiFn) : null);
+      });
+      existingScript.addEventListener('error', () => resolve(null));
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src =
+      'https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js';
+    script.async = true;
+    script.defer = true;
+    script.dataset.tsparticlesConfetti = 'true';
+    script.onload = () => {
+      const w2 = window as unknown as { confetti?: unknown };
+      resolve(typeof w2.confetti === 'function' ? (w2.confetti as ConfettiFn) : null);
+    };
+    script.onerror = () => resolve(null);
+
+    document.head.appendChild(script);
+  });
+
+  return confettiLoader;
+}
 
 interface SuccessModalProps {
   isOpen: boolean;
@@ -19,6 +65,70 @@ export default function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Respect user's reduced motion preference
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+
+    let cancelled = false;
+
+    loadConfettiFromCdn()
+      .then((confetti) => {
+        if (cancelled || !confetti) return;
+
+        const confettiFn = confetti;
+        const count = 200;
+        const defaults = {
+          origin: { y: 0.7 },
+          // Ensure confetti is above the modal overlay (z-50)
+          zIndex: 60,
+        };
+
+        function fire(particleRatio: number, opts: Record<string, unknown>) {
+          confettiFn(
+            Object.assign({}, defaults, opts, {
+              particleCount: Math.floor(count * particleRatio),
+            })
+          );
+        }
+
+        fire(0.25, {
+          spread: 26,
+          startVelocity: 55,
+        });
+
+        fire(0.2, {
+          spread: 60,
+        });
+
+        fire(0.35, {
+          spread: 100,
+          decay: 0.91,
+          scalar: 0.8,
+        });
+
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 25,
+          decay: 0.92,
+          scalar: 1.2,
+        });
+
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 45,
+        });
+      })
+      .catch(() => {
+        // If the CDN fails to load, fail silently (modal should still work)
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 

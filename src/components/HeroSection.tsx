@@ -9,13 +9,13 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
   const [url, setUrl] = useState('');
 
   return (
-    <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-400 via-green-400 to-emerald-400">
+    <section className="relative pt-24 pb-16 px-4 sm:px-2 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-400 via-green-400 to-emerald-400">
       <div className="max-w-7xl mx-auto h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[85vh]">
           <div className="space-y-8 max-w-xl">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
               Your Brand. Your Concept.
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-emerald-600">
+              <span className="text-transparent bg-clip-text text-emerald-950 bg-gradient-to-r from-lime-600 to-emerald-600">
                Posters Ready
               </span> in Minutes.
             </h1>
@@ -24,7 +24,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
               Turn your website URL into stunning, Instagram-ready posters in 180 seconds. Not hours.
             </p>
 
-            <div className="bg-white/20 backdrop-blur-md rounded-2xl p-1.5">
+            <div className="hero-search-attn bg-white/20 backdrop-blur-md rounded-2xl p-1.5">
               <div className="flex gap-2">
                 <div className="flex-1 relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60" size={20} />
@@ -45,9 +45,10 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
             <div className="flex flex-col sm:flex-row gap-4 pt-2 p-1.5">
               <button
                 onClick={onSecureAccess}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 transition-all duration-200 text-lg"
+                className="hero-matrix-btn hero-pulse-btn bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 border-2 border-transparent hover:border-lime-300 text-white hover:text-white hover:text-lime-300 px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-20 text-lg"
               >
-                Secure Business Access
+                <span className="hero-matrix-btn__rain" aria-hidden="true" />
+                <span className="relative z-10">Secure Business Access</span>
               </button>
             </div>
           </div>
@@ -58,7 +59,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
 
               {/* Coffee Brand - MAIN CARD (TOP LAYER) - FAR LEFT - FIRST */}
               <div
-                className="absolute w-70 lg:w-80 transition-all duration-500 hover:scale-105 z-40 hover:z-55 hover:z-59"
+                className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-40 hover:z-55 hover:z-59"
                 style={{ left: '5%', top: '10%', transform: 'rotate(-5deg)', animation: 'float-gentle 5s ease-in-out infinite 1s' }}
               >
                 <div className="rounded-xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.4),0_0_30px_rgba(132,204,22,0.6),0_0_60px_rgba(132,204,22,0.3)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.5),0_0_40px_rgba(132,204,22,0.8)] transition-shadow duration-300 border-4 border-lime-400">
@@ -73,7 +74,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
               {/* Pongal Poster - SECONDARY (MIDDLE LAYER) - PEEKING RIGHT - SECOND */}
               <div
                 className="absolute w-64 lg:w-80 transition-all duration-500 hover:scale-105 z-30 hover:z-50"
-                style={{ left: '30%', top: '12%', animation: 'float-slow 7s ease-in-out infinite 0.5s hover:z-50' }}
+                style={{ left: '30%', top: '12%', animation: 'float-gentle 7s ease-in-out infinite 0.5s hover:z-50' }}
               >
                 <div className="rounded-xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.35),0_0_25px_rgba(132,204,22,0.5),0_0_50px_rgba(132,204,22,0.3)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.45),0_0_35px_rgba(132,204,22,0.7)] transition-shadow duration-300 border-4 border-lime-400">
                   <img

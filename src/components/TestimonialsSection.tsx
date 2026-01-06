@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group">
+                        <div key={index} className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-[0_8px_30px_rgb(0,180,0,0.04)] hover:shadow-3xl hover:shadow-lime-500/60 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group">
                             <div className="relative mb-6">
                                 <div className="w-20 h-20 rounded-full p-1 bg-gradient-to-tr from-lime-400 to-emerald-500">
                                     <img

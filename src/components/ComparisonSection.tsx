@@ -25,7 +25,7 @@ export default function ComparisonSection() {
             </div>
 
             {/* Posters Ready - New Way */}
-            <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl hover:scale-[1.02] transition-all duration-300">
+            <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-2xl hover:shadow-orange-500/50  hover:scale-[1.05] transition-all duration-300">
               <img
                 src="/assets/comparison-new-way.jpg"
                 alt="Posters Ready - AI Powered Design Process"
