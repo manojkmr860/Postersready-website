@@ -1,4 +1,4 @@
-import { TrendingUp, Camera, Zap, ChevronLeft, Instagram } from 'lucide-react';
+import { TrendingUp, Camera, Zap, Sparkles, ChevronLeft, Instagram } from 'lucide-react';
 import { CometCard } from '@/components/ui/comet-card';
 
 export default function InstagramSection() {
@@ -29,7 +29,7 @@ export default function InstagramSection() {
               {/* Feature 1 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
-                  <Camera className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <Camera className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Visual-First Content</h3>
@@ -42,7 +42,7 @@ export default function InstagramSection() {
               {/* Feature 2 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-400 to-emerald-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-200 group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <TrendingUp className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Data-Driven Timing</h3>
@@ -55,7 +55,7 @@ export default function InstagramSection() {
               {/* Feature 3 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <Zap className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Accelerated Engagement</h3>
@@ -68,12 +68,12 @@ export default function InstagramSection() {
               {/* Feature 4 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <Sparkles className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-gray-900">Accelerated Engagement</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">AI Brand Memory</h3>
                   <p className="text-lg text-gray-600 leading-relaxed max-w-sm">
-                    Professional-quality content that stops the scroll and drives action
+                    Automatically learns your brand style for consistent colors, fonts, and tone of voice
                   </p>
                 </div>
               </div>

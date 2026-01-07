@@ -21,10 +21,10 @@ export default function PricingSection({ onSecureAccess }: PricingSectionProps) 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
             Affordable AI Design Plans for Small Businesses
           </h2>
-          <p className="text-xl text-emerald-800 font-semibold">
+          <p className="text-3xl sm:text-1xl lg:text-3xl text-emerald-800 font-semibold">
             Enterprise-Level Instagram Content. Small Business Pricing.
           </p>
-          <p className="text-base text-gray-600 mt-2 max-w-xl mx-auto">
+          <p className="text-base text-black-600 mt-2 max-w-xl mx-auto">
             Professional social media design tools starting at just $9/month
           </p>
         </div>

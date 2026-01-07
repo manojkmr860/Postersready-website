@@ -34,7 +34,7 @@ export default function FAQSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
             Frequently Asked Questions About AI Instagram Design
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white font-bold max-w-2xl mx-auto">
             Everything small business owners and social media managers need to know about Posters Ready
           </p>
         </div>

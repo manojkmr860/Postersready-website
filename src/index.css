@@ -138,6 +138,54 @@
   }
 }
 
+/* Hero headline spotlight (only for the "Posters Ready" word) */
+@keyframes hero-brand-spotlight {
+  0% {
+    -webkit-clip-path: ellipse(40% 140% at -20% 50%);
+    clip-path: ellipse(40% 140% at -20% 50%);
+  }
+  50% {
+    -webkit-clip-path: ellipse(40% 140% at 50% 50%);
+    clip-path: ellipse(40% 140% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: ellipse(40% 140% at 120% 50%);
+    clip-path: ellipse(40% 140% at 120% 50%);
+  }
+}
+
+.hero-brand-spotlight {
+  position: relative;
+  display: inline-block;
+  /* base word stays readable */
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-brand-spotlight::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #a3e635 0%, #f9f8f7 80%, #059669 100%); /* lime-400 -> emerald-600 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter:
+    drop-shadow(0 0 10px rgba(163, 230, 53, 0.35))
+    drop-shadow(0 0 14px rgba(5, 150, 105, 0.25));
+  -webkit-clip-path: ellipse(40% 140% at -20% 50%);
+  clip-path: ellipse(40% 140% at -20% 50%);
+  animation: hero-brand-spotlight 5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-brand-spotlight::before {
+    animation: none;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+}
+
 /* Always-on glow border effect (HeroSection - Secure Business Access button only) */
 @keyframes hero-glowing {
   0% {

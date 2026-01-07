@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
                         Trusted by Business Owners & Social Media Managers
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        See how small businesses and marketing professionals create stunning Instagram content with Posters Ready
+                        See how small businesses and marketing professionals create stunning Instagram content with Posters Ready AI Agents
                     </p>
                 </div>
 

@@ -6,8 +6,8 @@ export default function ComparisonSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="bg-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/40 mb-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-4">
-              AI Design vs. Traditional Methods: Save Hours Every Week
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-950 mb-5">
+              PostersReady vs. Traditional Methods: <br/><span className="text-xl sm:text-2xl lg:text-3xl text-emerald-800 font-semibold">Save Hours in a designing each poster</span>
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Compare manual Instagram design workflows with Posters Ready's AI-powered automation

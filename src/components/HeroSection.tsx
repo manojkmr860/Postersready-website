@@ -15,12 +15,13 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
           <div className="space-y-8 max-w-xl">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
               Your Brand. Your Concept.
-              <span className="text-transparent bg-clip-text text-emerald-950 bg-gradient-to-r from-lime-600 to-emerald-600">
-               Posters Ready
-              </span> in Minutes.
+              <span className="hero-brand-spotlight" data-text="Posters Ready">
+                Posters Ready
+              </span>{' '}
+              in Minutes.
             </h1>
 
-            <p className="text-lg sm:text-xl text-white/90 leading-relaxed font-medium">
+            <p className="text-lg sm:text-xl text-white leading-relaxed font-medium">
               Create stunning, brand-consistent <strong>Instagram posts</strong> in 180 seconds with our <strong>AI design agent</strong>. Perfect for <em>small businesses</em> and <em>social media agencies</em>.
             </p>
 
