@@ -9,7 +9,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
   const [url, setUrl] = useState('');
 
   return (
-    <section className="relative pt-24 pb-16 px-4 sm:px-2 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-400 via-green-400 to-emerald-400" aria-label="Hero section - AI Instagram Post Designer">
+    <section className="relative pt-24 pb-16 px-4 sm:px-2 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-300 via-green-500 to-emerald-600" aria-label="Hero section - AI Instagram Post Designer">
       <div className="max-w-7xl mx-auto h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[85vh]">
           <div className="space-y-8 max-w-xl">
