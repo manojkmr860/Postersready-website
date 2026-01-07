@@ -36,4 +36,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
           local-dir: dist/
-          server-dir: public_html/
+          # Hostinger FTP users often start inside `public_html/` already.
+          # Deploying to `public_html/` would create `public_html/public_html/`.
+          server-dir: /
