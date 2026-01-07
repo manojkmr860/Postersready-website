@@ -165,7 +165,7 @@
   content: attr(data-text);
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #a3e635 0%, #f9f8f7 80%, #059669 100%); /* lime-400 -> emerald-600 */
+  background: linear-gradient(180deg, #007800FF 85%); /* lime-400 -> emerald-600 */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
