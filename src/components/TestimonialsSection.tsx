@@ -35,13 +35,16 @@ export default function TestimonialsSection() {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-                        Testimonials and Trust
+                        Trusted by Business Owners & Social Media Managers
                     </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        See how small businesses and marketing professionals create stunning Instagram content with Posters Ready AI Agents
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group">
+                        <div key={index} className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-[0_8px_30px_rgb(0,180,0,0.04)] hover:shadow-3xl hover:shadow-lime-500/60 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group">
                             <div className="relative mb-6">
                                 <div className="w-20 h-20 rounded-full p-1 bg-gradient-to-tr from-lime-400 to-emerald-500">
                                     <img

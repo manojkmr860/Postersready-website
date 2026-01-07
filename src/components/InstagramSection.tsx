@@ -1,13 +1,23 @@
-import { TrendingUp, Camera, Zap, ChevronLeft, Instagram } from 'lucide-react';
+import { TrendingUp, Camera, Zap, Sparkles, ChevronLeft, Instagram } from 'lucide-react';
+import { CometCard } from '@/components/ui/comet-card';
 
 export default function InstagramSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-40 px-5 sm:px-7 lg:px-9 relative" aria-label="Instagram optimization features" id="features">
+      {/* Smooth Blend to Next Section (Bottom) */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) calc(100% - 128px), rgba(255,255,255,0) 100%)',
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto relative justify-center items-center z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center self-center justify-center">
 
           {/* Left Column: Features */}
-          <div className="space-y-12">
+          <div className="space-y-14 justify-center items-center">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-emerald-950 leading-[1.1] tracking-tight">
               Built for the Feed.<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-emerald-600">
@@ -19,7 +29,7 @@ export default function InstagramSection() {
               {/* Feature 1 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
-                  <Camera className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <Camera className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Visual-First Content</h3>
@@ -32,7 +42,7 @@ export default function InstagramSection() {
               {/* Feature 2 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-400 to-emerald-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-200 group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <TrendingUp className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Data-Driven Timing</h3>
@@ -45,7 +55,7 @@ export default function InstagramSection() {
               {/* Feature 3 */}
               <div className="flex gap-6 items-start group">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="text-white fill-white/20" size={32} strokeWidth={2} />
+                  <Zap className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-900">Accelerated Engagement</h3>
@@ -54,16 +64,29 @@ export default function InstagramSection() {
                   </p>
                 </div>
               </div>
+
+              {/* Feature 4 */}
+              <div className="flex gap-6 items-start group">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-300 to-lime-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-200 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="text-white fill-white/20 animate-pulse" size={32} strokeWidth={2} />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-gray-900">AI Brand Memory</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed max-w-sm">
+                    Automatically learns your brand style for consistent colors, fonts, and tone of voice
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Right Column: Phone Mockup */}
-          <div className="relative flex justify-center items-center">
+          <CometCard className="relative flex justify-center items-center">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-lime-400/20 rounded-full blur-3xl pointer-events-none"></div>
 
             {/* iPhone Frame */}
-            <div className="relative w-[340px] h-[680px] bg-gray-900 rounded-[50px] shadow-[0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] border-[8px] border-gray-900 overflow-hidden ring-4 ring-gray-100 z-10 transform hover:scale-[1.02] transition-transform duration-500">
+            <div className=" hero-pulse-btn relative w-[340px] h-[680px] bg-gray-900 rounded-[50px] shadow-[0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] border-[8px] border-gray-900 overflow-hidden ring-4 ring-gray-100 z-10 transform hover:scale-[1.02] transition-transform duration-500">
               {/* Notch & Status Bar Area */}
               <div className="absolute top-0 w-full h-14 bg-white z-20 flex justify-between items-end px-6 pb-2">
                 <span className="text-xs font-bold text-gray-900">9:41</span>
@@ -120,7 +143,7 @@ export default function InstagramSection() {
               {/* Home Indicator */}
               <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-gray-900 rounded-full z-30"></div>
             </div>
-          </div>
+          </CometCard>
 
         </div>
       </div>

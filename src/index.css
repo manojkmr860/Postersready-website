@@ -36,3 +36,230 @@
   }
 }
 
+/* Matrix rain effect (HeroSection - Secure Business Access button only) */
+@keyframes hero-matrix-rain {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.hero-matrix-btn {
+  position: relative;
+  /* Keep this visible so the glow border can render outside the button */
+  overflow: visible;
+}
+
+.hero-matrix-btn__rain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 55%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: -100% 0;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.hero-matrix-btn:hover .hero-matrix-btn__rain {
+  opacity: 1;
+  animation: hero-matrix-rain 1.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-matrix-btn:hover .hero-matrix-btn__rain {
+    animation: none;
+  }
+}
+
+/* Hero search bar attention (matrix-rain style, orange) */
+@keyframes hero-search-matrix-rain {
+  0% {
+    background-position: 0 0, 200% 0;
+  }
+  100% {
+    background-position: 35px 0, -200% 0;
+  }
+}
+
+.hero-search-attn {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-search-attn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background-image:
+    /* subtle "matrix" scan lines */
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 120, 0, 0.18) 0,
+      rgba(0, 120, 0, 0.18) 1px,
+      rgba(0, 120, 0, 0.3) 1px,
+      rgba(0, 120, 0, 0.3) 8px
+    ),
+    /* moving band */
+    linear-gradient(
+      45deg,
+      rgba(0, 120, 0, 0) 0%,
+      rgba(0, 120, 0, 0.3) 35%,
+      rgba(0, 120, 0, 0.75) 50%,
+      rgba(0, 120, 0, 0.3) 65%,
+      rgba(0, 120, 0, 0) 100%
+    );
+  background-size: 4px 100%, 180% 100%;
+  background-position: 0 0, 160% 0;
+  filter: blur(3px);
+  opacity: 0.7;
+  animation: hero-search-matrix-rain 2.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-search-attn::before {
+    animation: none;
+    opacity: 0.9;
+  }
+}
+
+/* Hero headline spotlight (only for the "Posters Ready" word) */
+@keyframes hero-brand-spotlight {
+  0% {
+    -webkit-clip-path: ellipse(40% 140% at -20% 50%);
+    clip-path: ellipse(40% 140% at -20% 50%);
+  }
+  50% {
+    -webkit-clip-path: ellipse(40% 140% at 50% 50%);
+    clip-path: ellipse(40% 140% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: ellipse(40% 140% at 120% 50%);
+    clip-path: ellipse(40% 140% at 120% 50%);
+  }
+}
+
+.hero-brand-spotlight {
+  position: relative;
+  display: inline-block;
+  /* base word stays readable */
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-brand-spotlight::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #a3e635 0%, #f9f8f7 80%, #059669 100%); /* lime-400 -> emerald-600 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter:
+    drop-shadow(0 0 10px rgba(163, 230, 53, 0.35))
+    drop-shadow(0 0 14px rgba(5, 150, 105, 0.25));
+  -webkit-clip-path: ellipse(40% 140% at -20% 50%);
+  clip-path: ellipse(40% 140% at -20% 50%);
+  animation: hero-brand-spotlight 5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-brand-spotlight::before {
+    animation: none;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+}
+
+/* Always-on glow border effect (HeroSection - Secure Business Access button only) */
+@keyframes hero-glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Pulse Animation (HeroSection button - full button + text) */
+@keyframes hero-btn-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-pulse-btn {
+  transform-origin: center;
+  animation: hero-btn-pulse 1.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-pulse-btn:hover {
+  /* Stop pulsing on hover and keep the button at a fixed size */
+  animation: none;
+  transform: scale(1);
+}
+
+.hero-glow-btn {
+  z-index: 0;
+}
+
+.hero-glow-btn::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff9000,  #ff9b19,  #ffa632,  #ffb14c,  #ffbc66,  #ffc77f    );
+  background-size: 600%;
+  filter: blur(15px);
+  opacity: 0.9; /* always visible */
+  animation: hero-glowing 20s linear infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Cover the inside so the glow reads as an OUTER glow (not behind the text). */
+.hero-glow-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  /* Inherit the button background (works with Tailwind bg-gradient + hover states) */
+  background: inherit;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow-btn::before {
+    animation: none;
+  }
+  .hero-pulse-btn {
+    animation: none;
+  }
+}
+
