@@ -179,7 +179,7 @@ export function useRazorpay(
         
         // Your Razorpay Payment Link URL
         // Get this from: Razorpay Dashboard > Payment Links > Create Link
-        const RAZORPAY_PAYMENT_LINK = 'https://rzp.io/rzp/eScE72Sn';
+        const RAZORPAY_PAYMENT_LINK = 'https://rzp.io/rzp/GnTwFXCo';
         
         // Build URL with prefilled customer details
         // Razorpay Payment Links support these prefill parameters
