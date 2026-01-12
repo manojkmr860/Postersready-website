@@ -143,10 +143,10 @@ export default function JoinWaitlistModal({
           {/* Thank You Header */}
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-2">
-              Thank you for your interest!
+              Welcome to PostersReady Beta Application!
             </h2>
             <p className="text-lg text-emerald-700">
-              We're excited to have you join the PostersReady community.
+            Only 100 beta seats are open for Users, who want to experience and truly feels like a co-worker. Apply below to see if you’re one of the 100.
             </p>
           </div>
 

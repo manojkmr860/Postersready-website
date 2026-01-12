@@ -1,7 +1,11 @@
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 // Imports removed as they are no longer used with the new image-based cards
 
-export default function WorkflowSection() {
+interface WorkflowSectionProps {
+  onGetStarted: () => void;
+}
+
+export default function WorkflowSection({ onGetStarted }: WorkflowSectionProps) {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white" aria-label="How Posters Ready Works" id="how-it-works">
       <div className="max-w-6xl mx-auto">
@@ -100,7 +104,10 @@ export default function WorkflowSection() {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="bg-lime-500 text-black px-8 py-3 rounded-full font-bold hover:bg-lime-400 transition-colors shadow-lg hover:shadow-lime-500/20">
+          <button 
+            onClick={onGetStarted}
+            className="bg-lime-500 text-black px-16 py-4 text-lg rounded-full font-bold hover:bg-lime-400 transition-colors shadow-lg hover:shadow-lime-500/20"
+          >
             Get Started
           </button>
         </div>

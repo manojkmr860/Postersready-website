@@ -21,7 +21,7 @@ function App() {
     <div className="min-h-screen">
       <Header onSecureAccess={handleSecureAccess} />
       <HeroSection onSecureAccess={handleSecureAccess} />
-      <WorkflowSection />
+      <WorkflowSection onGetStarted={handleSecureAccess} />
       <TestimonialsSection />
       <InstagramSection />
       <ComparisonSection />
