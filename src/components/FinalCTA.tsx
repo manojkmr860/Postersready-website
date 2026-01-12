@@ -56,7 +56,7 @@ export default function FinalCTA({ onSecureAccess }: FinalCTAProps) {
           onClick={onSecureAccess}
           className="hero-matrix-btn hero-pulse-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transition-all duration-200 shadow-xl"
         >
-          Secure Business Access
+          Join Waitlist
         </button>
 
         <div className="mt-8 text-white/60 text-sm">

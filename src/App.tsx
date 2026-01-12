@@ -8,13 +8,13 @@ import ComparisonSection from './components/ComparisonSection';
 import PricingSection from './components/PricingSection';
 import FAQSection from './components/FAQSection';
 import FinalCTA from './components/FinalCTA';
-import SuccessModal from './components/SuccessModal';
+import JoinWaitlistModal from './components/JoinWaitlistModal';
 
 function App() {
-  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+  const [isJoinWaitlistModalOpen, setIsJoinWaitlistModalOpen] = useState(false);
 
   const handleSecureAccess = () => {
-    setIsSuccessModalOpen(true);
+    setIsJoinWaitlistModalOpen(true);
   };
 
   return (
@@ -28,9 +28,9 @@ function App() {
       <PricingSection onSecureAccess={handleSecureAccess} />
       <FAQSection />
       <FinalCTA onSecureAccess={handleSecureAccess} />
-      <SuccessModal
-        isOpen={isSuccessModalOpen}
-        onClose={() => setIsSuccessModalOpen(false)}
+      <JoinWaitlistModal
+        isOpen={isJoinWaitlistModalOpen}
+        onClose={() => setIsJoinWaitlistModalOpen(false)}
       />
     </div>
   );

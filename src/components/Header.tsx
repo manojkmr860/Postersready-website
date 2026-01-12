@@ -42,7 +42,7 @@ export default function Header({ onSecureAccess }: HeaderProps) {
               onClick={onSecureAccess}
               className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 transition-all duration-200 text-sm sm:text-base whitespace-nowrap"
             >
-              Secure Business Access
+              Join Waitlist
             </button>
           </div>
         </div>

@@ -1,0 +1,23 @@
+# =====================================================
+# DENY ALL ACCESS TO THIS DIRECTORY
+# =====================================================
+# 
+# This file blocks ALL HTTP access to the config folder.
+# Even if someone tries to access /config/env.php directly,
+# they will get a 403 Forbidden error.
+#
+# NOTE: This is a backup protection. The config folder
+# should already be OUTSIDE public_html and not web accessible.
+
+# Deny all requests
+Deny from all
+
+# Block all methods
+<LimitExcept NONE>
+    Deny from all
+</LimitExcept>
+
+# Alternative method for Apache 2.4+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>

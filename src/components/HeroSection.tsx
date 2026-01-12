@@ -49,7 +49,7 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
                 className="hero-matrix-btn hero-pulse-btn bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 border-2 border-transparent hover:border-lime-300 text-white hover:text-white hover:text-lime-300 px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-20 text-lg"
               >
                 <span className="hero-matrix-btn__rain" aria-hidden="true" />
-                <span className="relative z-10">Secure Business Access</span>
+                <span className="relative z-10">Join Waitlist</span>
               </button>
             </div>
           </div>

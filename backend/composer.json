@@ -1,0 +1,25 @@
+{
+    "name": "postersready/payment-backend",
+    "description": "PostersReady Payment Backend - Razorpay Integration",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4",
+        "razorpay/razorpay": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "PostersReady\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"echo 'Razorpay SDK installed successfully!\\n';\""
+        ]
+    }
+}
