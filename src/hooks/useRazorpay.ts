@@ -170,21 +170,33 @@ export function useRazorpay(
       // =========================================================
       // FALLBACK: If backend API is not configured, use Razorpay Payment Link
       // =========================================================
+      // 
+      // When VITE_API_URL is not set, redirect to Razorpay Payment Link
+      // This allows payments to work without deploying the PHP backend
+      // =========================================================
       if (!isBackendConfigured()) {
-        console.warn('Backend API not configured. Using Razorpay Payment Link fallback.');
+        console.log('Backend API not configured. Redirecting to Razorpay Payment Link...');
         
-        // Razorpay Payment Link (replace with your actual payment link)
-        const RAZORPAY_PAYMENT_LINK = 'https://rzp.io/rzp/GnTwFXCo';
+        // Your Razorpay Payment Link URL
+        // Get this from: Razorpay Dashboard > Payment Links > Create Link
+        const RAZORPAY_PAYMENT_LINK = 'https://rzp.io/rzp/eScE72Sn';
         
         // Build URL with prefilled customer details
-        const params = new URLSearchParams({
-          name: customerInfo.name,
-          email: customerInfo.email,
-          contact: customerInfo.phone || '',
-        });
+        // Razorpay Payment Links support these prefill parameters
+        const params = new URLSearchParams();
+        if (customerInfo.name) params.set('name', customerInfo.name);
+        if (customerInfo.email) params.set('email', customerInfo.email);
+        if (customerInfo.phone) params.set('contact', customerInfo.phone);
         
-        // Redirect to Razorpay Payment Link
-        window.location.href = `${RAZORPAY_PAYMENT_LINK}?${params.toString()}`;
+        // Construct the full URL
+        const fullUrl = params.toString() 
+          ? `${RAZORPAY_PAYMENT_LINK}?${params.toString()}`
+          : RAZORPAY_PAYMENT_LINK;
+        
+        console.log('Redirecting to:', fullUrl);
+        
+        // Use location.assign for cleaner redirect (allows back button)
+        window.location.assign(fullUrl);
         return;
       }
 
