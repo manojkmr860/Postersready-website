@@ -17,7 +17,7 @@
 // Type-safe environment access
 export const ENV = {
   // API Base URL for PHP backend
-  API_URL: import.meta.env.VITE_API_URL as string || 'https://yourdomain.com/api',
+  API_URL: import.meta.env.VITE_API_URL as string || 'https://postersready.com/api',
   
   // Enable/disable payment functionality
   PAYMENTS_ENABLED: import.meta.env.VITE_PAYMENTS_ENABLED === 'true',

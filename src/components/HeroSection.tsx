@@ -25,24 +25,6 @@ export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
               Create stunning, brand-consistent <strong>Instagram posts</strong> in 180 seconds with our <strong>AI design agent</strong>. Perfect for <em>small businesses</em> and <em>social media agencies</em>.
             </p>
 
-            <div className="hero-search-attn bg-white/20 backdrop-blur-md rounded-2xl p-1.5">
-              <div className="flex gap-2">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60" size={20} />
-                  <input
-                    type="text"
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                    placeholder="Enter your website URL to create your branding"
-                    className="w-full pl-12 pr-4 py-4 bg-white/90 rounded-xl border-none outline-none text-gray-800 placeholder-gray-500 font-medium"
-                  />
-                </div>
-                <button className="bg-white text-lime-600 px-6 py-4 rounded-xl font-bold hover:bg-white/95 transition-all duration-200 flex items-center gap-2">
-                  <Search size={20} />
-                </button>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 pt-2 p-1.5">
               <button
                 onClick={onSecureAccess}
