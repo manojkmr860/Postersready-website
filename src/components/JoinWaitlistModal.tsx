@@ -1,7 +1,6 @@
 import { X } from 'lucide-react';
 import { useState } from 'react';
-import { useRazorpay } from '../hooks/useRazorpay';
-import type { PlanId } from '../types/razorpay';
+import { useRazorpay, type PlanId } from '../hooks/useRazorpay';
 
 interface JoinWaitlistModalProps {
   isOpen: boolean;
@@ -38,8 +37,8 @@ export default function JoinWaitlistModal({
     category: '',
   });
 
-  // Razorpay payment hook
-  const { isLoading, error, isScriptLoaded, initiatePayment, clearError } = useRazorpay(
+  // Razorpay payment hook - simple redirect to payment link
+  const { isLoading, error, initiatePayment, clearError } = useRazorpay(
     (paymentId) => {
       // Payment successful
       onClose();
@@ -260,9 +259,9 @@ export default function JoinWaitlistModal({
             {/* Next Button */}
             <button
               type="submit"
-              disabled={!isFormValid || isLoading || !isScriptLoaded}
+              disabled={!isFormValid || isLoading}
               className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
-                isFormValid && !isLoading && isScriptLoaded
+                isFormValid && !isLoading
                   ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:shadow-lg hover:scale-[1.02]'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
               }`}
@@ -289,10 +288,8 @@ export default function JoinWaitlistModal({
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     />
                   </svg>
-                  Processing...
+                  Redirecting...
                 </span>
-              ) : !isScriptLoaded ? (
-                'Loading...'
               ) : (
                 'Proceed to Payment'
               )}

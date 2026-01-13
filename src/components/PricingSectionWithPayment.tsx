@@ -16,7 +16,7 @@
 import { useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { PaymentButton } from './PaymentButton';
-import type { PlanId } from '../types/razorpay';
+import type { PlanId } from '../hooks/useRazorpay';
 
 interface PricingSectionWithPaymentProps {
   // Optional: pre-filled customer info from previous form

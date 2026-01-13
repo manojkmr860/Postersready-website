@@ -3,13 +3,12 @@
  * PAYMENT BUTTON COMPONENT
  * =====================================================
  * 
- * Reusable payment button that triggers Razorpay checkout.
+ * Reusable payment button that redirects to Razorpay Payment Link.
  * Collects customer information before initiating payment.
  */
 
 import { useState } from 'react';
-import { useRazorpay } from '../hooks/useRazorpay';
-import type { PlanId } from '../types/razorpay';
+import { useRazorpay, type PlanId } from '../hooks/useRazorpay';
 
 interface PaymentButtonProps {
   planId: PlanId;
@@ -33,7 +32,7 @@ export function PaymentButton({
   customerEmail: initialEmail = '',
   customerPhone: initialPhone = '',
 }: PaymentButtonProps) {
-  const { isLoading, error, isScriptLoaded, initiatePayment, clearError } = useRazorpay(
+  const { isLoading, error, initiatePayment, clearError } = useRazorpay(
     onSuccess,
     onFailure
   );
@@ -104,7 +103,7 @@ export function PaymentButton({
       {/* Main Payment Button */}
       <button
         onClick={handleClick}
-        disabled={isLoading || !isScriptLoaded}
+        disabled={isLoading}
         className={className || defaultButtonStyles}
       >
         {isLoading ? (
@@ -129,10 +128,8 @@ export function PaymentButton({
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               />
             </svg>
-            Processing...
+            Redirecting...
           </span>
-        ) : !isScriptLoaded ? (
-          'Loading...'
         ) : (
           buttonText
         )}
@@ -263,7 +260,7 @@ export function PaymentButton({
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       />
                     </svg>
-                    Processing...
+                    Redirecting...
                   </span>
                 ) : (
                   'Proceed to Payment'
