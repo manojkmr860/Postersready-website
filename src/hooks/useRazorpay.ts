@@ -293,11 +293,11 @@ export function useRazorpay(
         const razorpay = new window.Razorpay(options);
 
         // Handle payment failures
-        razorpay.on('payment.failed', (response: {
-          error: { description: string; reason: string };
-        }) => {
+        razorpay.on('payment.failed', (response: unknown) => {
           setIsLoading(false);
-          const errorMessage = response.error.description || 'Payment failed';
+          const errorMessage =
+            (response as { error?: { description?: string } })?.error?.description ||
+            'Payment failed';
           setError(errorMessage);
           
           if (onFailure) {

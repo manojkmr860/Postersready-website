@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { useRef } from 'react';
 import {
   motion,
@@ -10,7 +10,10 @@ import {
 
 import { cn } from '@/lib/utils';
 
-export interface CometCardProps extends HTMLAttributes<HTMLDivElement> {
+type MotionDivProps = Omit<ComponentPropsWithoutRef<typeof motion.div>, 'ref' | 'children'>;
+
+export type CometCardProps = MotionDivProps & {
+  children?: ReactNode;
   /**
    * Glow size in px (radial highlight that follows the pointer)
    * @default 320
@@ -21,7 +24,7 @@ export interface CometCardProps extends HTMLAttributes<HTMLDivElement> {
    * @default 6
    */
   tilt?: number;
-}
+};
 
 export function CometCard({
   className,

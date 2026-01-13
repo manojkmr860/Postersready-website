@@ -1,13 +1,8 @@
-import { Search } from 'lucide-react';
-import { useState } from 'react';
-
 interface HeroSectionProps {
   onSecureAccess: () => void;
 }
 
 export default function HeroSection({ onSecureAccess }: HeroSectionProps) {
-  const [url, setUrl] = useState('');
-
   return (
     <section className="relative pt-24 pb-16 px-4 sm:px-2 lg:px-8 overflow-hidden min-h-screen bg-gradient-to-br from-lime-300 via-green-500 to-emerald-600" aria-label="Hero section - AI Instagram Post Designer">
       <div className="max-w-7xl mx-auto h-full">
