@@ -57,9 +57,9 @@ async function readFileIfExists(filePath) {
     const stat = await fs.stat(filePath);
     if (stat.isDirectory()) {
       const indexPath = path.join(filePath, 'index.html');
-      return await fs.readFile(indexPath);
+      return { filePath: indexPath, data: await fs.readFile(indexPath) };
     }
-    return await fs.readFile(filePath);
+    return { filePath, data: await fs.readFile(filePath) };
   } catch {
     return null;
   }
@@ -69,15 +69,23 @@ async function readFileIfExists(filePath) {
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url ?? '/', 'http://localhost');
-    const pathname = decodeURIComponent(url.pathname);
+    const rawPathname = decodeURIComponent(url.pathname);
+    // Make pathname relative so path resolution stays inside dist/.
+    // (path.join(distDir, "/assets/x") would otherwise ignore distDir.)
+    const pathname = rawPathname.replace(/^\/+/, '');
 
-    // Normalize path to a filesystem path under dist
-    const candidate = path.join(distDir, pathname);
-    const data = await readFileIfExists(candidate);
+    // Normalize path to a filesystem path under dist (and prevent traversal)
+    const candidate = path.resolve(distDir, `./${pathname}`);
+    if (!candidate.startsWith(distDir)) {
+      res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end('Bad request');
+      return;
+    }
+    const resolved = await readFileIfExists(candidate);
 
-    if (data) {
-      res.writeHead(200, { 'Content-Type': contentTypeFor(candidate) });
-      res.end(data);
+    if (resolved) {
+      res.writeHead(200, { 'Content-Type': contentTypeFor(resolved.filePath) });
+      res.end(resolved.data);
       return;
     }
 
