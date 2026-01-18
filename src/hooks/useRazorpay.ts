@@ -11,7 +11,7 @@
 import { useState, useCallback } from 'react';
 
 // Razorpay Payment Link URL
-const RAZORPAY_PAYMENT_LINK = 'https://rzp.io/rzp/GnTwFXCo';
+const RAZORPAY_PAYMENT_LINK = 'https://rzp.io/rzp/rmTcTtc';
 
 export type PlanId = 'starter' | 'visionary' | 'enterprise';
 
